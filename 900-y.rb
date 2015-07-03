@@ -3,7 +3,7 @@ Z = ->(z) {
   ->(f) { z.(->(n){ f.(f).(n) }  )})
 }
 
-fact = Z.( ->(recursion) { ->(x) { x == 1 ? 1 : x * recursion.(x-1) } })
+fact = Z.( ->(recursion) { ->(x) { x == 0 ? 1 : x * recursion.(x-1) } })
 puts fact.(5)
 
 times2 = ->(x) { x * 2 }
