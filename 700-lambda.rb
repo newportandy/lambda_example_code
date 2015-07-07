@@ -39,4 +39,7 @@ def to_integer(num)
   num.(->(x) { x + 1}).(0)
 end
 
+
 # Just substitute all the stuff in right?
+
+#puts to_integer(FACT.(EIGHT))
