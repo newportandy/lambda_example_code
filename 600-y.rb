@@ -16,4 +16,4 @@ fact = U.(
 
 puts fact.(8)
 
-#Refactor - pass the internal function into the block as a new argument
+#Refactor - create a new function and pass the internal function into the block as a new argument
