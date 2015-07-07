@@ -1,10 +1,10 @@
 # Simple Ruby factorial
-fact1 = ->(x) {
+fact = ->(x) {
   if x == 1
     1
   else
-    x * fact1.(x-1)
+    x * fact.(x-1)
   end
 }
-puts fact1.(5)
+puts fact.(5)
 #Refactor -> pass factorial function as argument to factorial.....

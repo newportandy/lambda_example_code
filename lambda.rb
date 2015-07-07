@@ -13,7 +13,7 @@ DECREMENT = ->(n) { ->(f) { ->(x) { n.(->(g) { ->(h){ h.(g.(f)) } })
 
 ADD = ->(a) { ->(b) { a.(INCREMENT).(b) } }
 SUBTRACT = ->(a) { ->(b) { a.(DECREMENT).(b) } }
-MULT = ->(a) { ->(b) { ->(c) { a.(b.(c)) } } }
+MULT = ->(a) { ->(b) { ->(f) {a.(b.(f))} } }
 
 
 TO_INT = ->(num) { num.(->(x){ x + 1}).(0) }
@@ -70,22 +70,24 @@ puts "IS_ZERO when INCREMENT.(ZERO)"
 puts TO_BOOL.(IS_ZERO.(INCREMENT.(ZERO)))
 
 Z = ->(z) {
-  ->(f) {    ->(n){ f.(f).(n) }  }.(
-  ->(f) { z.(->(n){ f.(f).(n) }  )})
+  ->(f) {    ->(x){ f.(f).(x) }  }.(
+  ->(f) { z.(->(x){ f.(f).(x) }  )})
 }
 
 FACT = Z.( ->(recursion) {
   ->(x) {
     IF.(IS_ZERO.(x)).(
-      ONE
+      ->(z) {
+        ONE.(z)
+      }
     ).(
-      ->(z){
+      ->(z) {
         MULT.(x).(recursion.(DECREMENT.(x))).(z)
       }
     )
   }
 })
 
-puts "FACT.(FOUR)"
-puts TO_INT.(FACT.(FOUR))
+puts "FACT.(EIGHT)"
+puts TO_INT.(FACT.(EIGHT))
 puts "winning"
