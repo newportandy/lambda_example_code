@@ -19,6 +19,6 @@ fact = Y.(
   }
 )
 
-puts fact.(5)
+puts fact.(8)
 
 #Refactor - inline recursion and inline U

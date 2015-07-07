@@ -10,6 +10,6 @@ fact = U.(
     }
   }
 )
-puts fact.(5)
+puts fact.(8)
 
 #Refactor - extract the reapplicaiton of the function to itself inside the factorial function

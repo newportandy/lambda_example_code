@@ -8,6 +8,6 @@ fact = ->(x) {
   end
 }
 
-puts fact.(5)
+puts fact.(8)
 
 # let's start with numbers.....

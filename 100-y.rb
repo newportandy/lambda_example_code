@@ -6,5 +6,5 @@ fact = ->(x) {
     x * fact.(x-1)
   end
 }
-puts fact.(5)
+puts fact.(8)
 #Refactor -> pass factorial function as argument to factorial.....

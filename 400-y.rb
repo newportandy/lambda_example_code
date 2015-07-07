@@ -17,6 +17,6 @@ fact = ->(f) {
     }
   }
 )
-puts fact.(5)
+puts fact.(8)
 
 #Refactor - there's some duplication, extract the re-application of the function to itself
