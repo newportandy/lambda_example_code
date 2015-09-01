@@ -26,7 +26,7 @@ const Z = (z) =>{
 
 const FACT = Z((recur) => {
   return (x) => {
-    if (x == 1) {
+    if (x === 0) {
       return 1
     } else {
       return x * recur(x-1)

@@ -1,6 +1,6 @@
 const fact = (f) => {
   return (x) => {
-    if (x == 1) {
+    if (x === 0) {
       return 1
     } else {
       return x * f(f)(x-1)
@@ -8,7 +8,7 @@ const fact = (f) => {
   }
 }((f) => {
     return (x) => {
-      if (x == 1) {
+      if (x === 0) {
         return 1
       } else {
         return x * f(f)(x-1)
