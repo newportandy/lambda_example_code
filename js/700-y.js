@@ -1,8 +1,8 @@
 const U = (f) => { return f(f) }
 const Z = (z) =>{
   return U((f) => {
-    const recursion = (n) => { return f(f)(n) }
-    return z(recursion)
+    const recur = (n) => { return f(f)(n) }
+    return z(recur)
   })
 }
 

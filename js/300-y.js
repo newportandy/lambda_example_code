@@ -12,7 +12,7 @@ const fact = (f, x) => {
   }
 })
 
-console.log( fact(8) )
+console.log( fact(fact, 8) )
 //won't work - as we evaluate the function straight away we're going to blow the stack
 //before we even define the function.
 //
