@@ -36,10 +36,6 @@ const FACT = Z(
   }
 )
 
-function toBool(bool) {
-  return bool(true)(false)
-}
-
 function toInt(x) {
   return x((v) => { return v + 1 })(0)
 }

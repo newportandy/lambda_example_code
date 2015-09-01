@@ -24,21 +24,21 @@ const Z = (z) =>{
         ((f) => { return z((n) => { return f(f)(n)}) })
 }
 
-const FACT = Z((recur) => {
-  return (x) => {
-    if (x === 0) {
-      return 1
-    } else {
-      return x * recur(x-1)
+const FACT = Z(
+  (recur) => {
+    return (x) => {
+      if (x === 0) {
+        return 1
+      } else {
+        return x * recur(x-1)
+      }
     }
   }
-})
+)
 
 function toInt(x) {
   return x((v) => { return v + 1 })(0)
 }
-
-
 // Just substitute all the stuff in right?
 
 //console.log(toInt(FACT(EIGHT)))
