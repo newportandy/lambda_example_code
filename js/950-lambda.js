@@ -8,7 +8,7 @@ console.log(toInt( (z) =>{
 }(
   (recur) => {
     return (x) => {
-      return (bool) => { return (a) => { return (b) => { return bool(a)(b) } } }
+      return (bool) => { return bool }
         ((f) => { return f((v) => { return (x) => { return (y) => { return y } } })((x) => { return (y) => { return x } })}(x))(
         (z) => { return (f) => { return (v) => { return   f(v)  }}(z) }
       )(

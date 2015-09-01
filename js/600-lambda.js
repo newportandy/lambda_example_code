@@ -7,7 +7,7 @@ const FALSE = (x) => { return (y) => { return y } }
 
 const IS_ZERO = (f) => { return f((v) => { return FALSE })(TRUE) }
 
-const IF = (bool) => { return (a) => { return (b) => { return bool(a)(b) } } }
+const IF = (bool) => {  return bool }
 
 console.log(IF(IS_ZERO(ZERO))("TRUE!!!")("FALSE"))
 

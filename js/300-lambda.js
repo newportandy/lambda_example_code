@@ -4,7 +4,8 @@ const TWO  = (f) => { return (v) => { return f(f(v)) }}
 const DECREMENT = (n) => {
   return (f) => { return (x) => {
     return n((g) => { return (h) => { return h(g(f))}})((y) => { return x})((y) => { return y })
-  }}}
+  }}
+}
 
 
 function toInt(x) {
