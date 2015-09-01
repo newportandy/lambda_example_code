@@ -7,8 +7,8 @@ function toInt(x) {
   return x((v) => { return v + 1 })(0)
 }
 
-console.log(to_int(ZERO))
-console.log(to_int(ONE))
-console.log(to_int(TWO))
+console.log(toInt(ZERO))
+console.log(toInt(ONE))
+console.log(toInt(TWO))
 
 // next - subtraction.......... UGH....
