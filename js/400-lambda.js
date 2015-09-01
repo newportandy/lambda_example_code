@@ -14,4 +14,4 @@ function toInt(x) {
 console.log(toInt(FOUR))
 console.log(toInt(EIGHT))
 
-// Next up - boolean logic
+// Next up - booleans and checking for ZERO
